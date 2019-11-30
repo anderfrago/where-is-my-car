@@ -1,5 +1,7 @@
 {
   "name": "where-is-my-car",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

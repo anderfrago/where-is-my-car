@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goHome()"></ion-back-button>
+      <ion-title>Ruta de vuelta</ion-title>
+    </ion-buttons>
+    <ion-buttons >
+      <ion-button (click)="calculateRoute()">Calcular ruta</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="height: 50%;width: 100%" id="map_path"></div>
+  <div style="height: 50%;width: 100%" id="directionsPanel"></div>
+
+</ion-content>

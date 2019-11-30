@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button (click)="goHome()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Historico de ubicaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    <ion-item *ngFor="let location of auxLocationsList; let j = index"  >
+       
+        <ion-card (click)="gotoPath(j)">
+          <ion-card-header>
+            <ion-card-subtitle>{{location.id}}</ion-card-subtitle>
+            <ion-card-title>Posición {{j}}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+              <ion-label>Latitud</ion-label><ion-note slot="end" color="secondary"> {{location.lat}}</ion-note>
+              <ion-label>Longitud</ion-label><ion-note slot="end" color="tertiary">{{location.lng}} </ion-note>
+          </ion-card-content>
+
+
+        </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

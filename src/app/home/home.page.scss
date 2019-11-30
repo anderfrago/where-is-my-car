@@ -2,3 +2,7 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-content{
+  --background: #fff url('../../assets/images/bg-image.png') no-repeat center center / cover;
+}
