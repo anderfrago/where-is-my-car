@@ -43,40 +43,8 @@ export class LocationsDBService {
   }
 
   // Retrieving all values
-  // getAll(): Promise<ILocation[]> {
-  //   return this.storage.keys().then((k) => {
-  //     k.forEach(element => {
-  //       this.getItem(element).then(
-  //         data => {
-  //           this.auxLocationsList.push(data)
-  //         }
-  //       );
-
-  //     });
-  //     return this.auxLocationsList;
-  //   });
-  // }
-
-  // getAll(): Promise<ILocation[]> {
-
-  //   return new Promise((resolve, reject) => {
-  //     this.storage.keys().then((k) => {
-  //       let all = [];
-        
-  //       k.forEach(element => {
-  //         this.getItem(element).then(
-  //           data => {
-  //             all.push(data)
-  //           }
-  //         );
-  //       });
-        
-  //       resolve(all);
-  //     });
-  //   });
-
-  // }
   getAll() {
+    this.auxLocationsList = [];
     var promise = new Promise((resolve, reject) => {
       this.storage.forEach((value, key, index) => {
         this.auxLocationsList.push(value);
